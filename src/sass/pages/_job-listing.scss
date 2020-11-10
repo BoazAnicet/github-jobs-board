@@ -1,0 +1,214 @@
+#job-listing {
+  & .container {
+    max-width: 730px;
+  }
+
+  & .job-listing-header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--card-background);
+    color: var(--primary-text);
+    border-radius: 5px;
+    margin-top: -50px;
+    overflow: hidden;
+
+    & .logo {
+      display: flex;
+      align-items: center;
+      background-color: var(--white);
+      padding: 20px 40px;
+      height: 100px;
+
+      & img {
+        height: 28px;
+      }
+    }
+
+    .text {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & div {
+        & h3 {
+          word-wrap: break-word !important;
+        }
+
+        & span {
+          color: var(--secondary-text);
+        }
+      }
+    }
+
+    & .btn {
+      align-self: flex-end;
+    }
+  }
+
+  & .details {
+    background-color: var(--card-background);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 40px;
+    color: var(--secondary-text);
+
+    & a {
+      color: var(--tertiary-text);
+
+      &.btn {
+        color: var(--primary-text);
+      }
+    }
+
+    & .company-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary-text);
+
+      margin-bottom: 40px;
+
+      & .date {
+        color: var(--secondary-text);
+        margin-bottom: 5px;
+      }
+      & .location {
+        margin-top: 10px;
+        color: var(--tertiary-text);
+      }
+    }
+  }
+
+  .details-footer {
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 40px 40px 30px 40px;
+    color: var(--white);
+    background-image: url("../../assets/desktop/bg-pattern-detail-footer.svg");
+    background-position: center;
+    background-size: cover;
+
+    & a {
+      color: var(--white);
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768.98px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  #job-listing {
+    & .container {
+      width: auto;
+      margin: 0;
+    }
+
+    & .job-listing-header {
+      position: relative;
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--card-background);
+      color: var(--primary-text);
+      border-radius: 5px;
+      margin-top: -10px;
+      overflow: visible;
+
+      & .logo {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+        z-index: 10;
+        overflow: hidden;
+        border-radius: 5px;
+
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          height: 30px;
+        }
+      }
+
+      .text {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+
+        div {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        a {
+          align-self: center;
+        }
+      }
+    }
+
+    & .details {
+      margin-top: 20px;
+      padding: 20px;
+      width: auto;
+
+      & a {
+        color: var(--tertiary-text);
+
+        &.btn {
+          color: var(--primary-text);
+        }
+      }
+
+      & .company-info {
+        flex-direction: column;
+
+        & .btn {
+          width: 100%;
+          text-align: center;
+        }
+
+        & .date {
+          color: var(--secondary-text);
+          margin-bottom: 5px;
+        }
+        & .location {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .details-footer {
+      margin-top: 40px;
+      border-radius: 5px;
+      padding: 40px 40px 30px 40px;
+      color: var(--white);
+      background-image: url("../../assets/desktop/bg-pattern-detail-footer.svg");
+      background-position: center;
+      background-size: cover;
+      width: auto;
+    }
+  }
+}

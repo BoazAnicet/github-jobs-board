@@ -1,0 +1,70 @@
+.btn {
+  text-decoration: none;
+  padding: 10px 25px;
+  background-color: var(--primary-button-bg) !important;
+  color: var(--primary-button-text) !important;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: var(--primary-button-bg-hover) !important;
+    cursor: pointer;
+  }
+
+  &.light {
+    background-color: var(--secondary-button-bg) !important;
+    color: var(--secondary-button-text) !important;
+
+    &:hover {
+      background-color: var(--secondary-button-bg-hover) !important;
+    }
+  }
+}
+
+button {
+  font-family: "Kumbh Sans", sans-serif;
+  border: none;
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-text);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 35px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: var(--primary-button-bg-hover) !important;
+    cursor: pointer;
+  }
+
+  &.light {
+    background-color: var(--secondary-button-bg) !important;
+    color: var(--secondary-button-text) !important;
+
+    &:hover {
+      background-color: var(--secondary-button-bg-hover) !important;
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  button {
+    padding: 12px 25px;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768.98px) {
+  button {
+    padding: 16px 10px;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}

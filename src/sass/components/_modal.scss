@@ -1,0 +1,127 @@
+.modal-search {
+  width: auto;
+  margin-top: -40px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+
+  & form {
+    border-radius: 5px;
+    height: 80px;
+    background-color: var(--card-background);
+    margin: 0 20px;
+    width: 100%;
+    & #search.input-group {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+
+      input {
+        width: 100%;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & .filter {
+        margin-right: 20px;
+        height: 20px;
+        width: 20px;
+      }
+
+      & .btn {
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 45px;
+        padding: 10px;
+        margin: 0;
+      }
+    }
+  }
+
+  .modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    z-index: 200;
+
+    .modal-bg {
+      position: fixed;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#000, 0.5);
+      height: 100vh;
+      width: 100vw;
+      z-index: 300;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--card-background);
+      border-radius: 5px;
+      z-index: 400;
+
+      & .input-group {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        color: var(--primary-text);
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(#707070, 0.2);
+        }
+
+        img {
+          margin-right: 10px;
+        }
+
+        button {
+          width: 100%;
+          margin-top: 10px;
+        }
+
+        input {
+          border: none;
+        }
+      }
+
+      #location.input-group {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768.98px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .modal-search {
+    display: flex;
+  }
+}
